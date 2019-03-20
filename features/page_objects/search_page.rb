@@ -5,6 +5,7 @@ module Auto
     MIN_YEAR          = 'select[name="yearRange.min"]'
     SORT_SELECT       = 'select[name="sort"]'
     YEAR_BY_CAR       = 'ul[data-qa-selector="spec-list"] > li:nth-child(1)'
+    ACTIVE_FILTER     = 'li[data-qa-selector="active-filter"]'
 
     def search_registration_button
       page.find(SEARCH_REG_BUTTON)
@@ -18,6 +19,9 @@ module Auto
       page.find(SORT_SELECT)
     end
 
+    def year_from_cars
+      page.all(YEAR_BY_CAR)
+    end
   end
 end
 
