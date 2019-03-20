@@ -7,7 +7,6 @@ module Auto
     def parsed_years_from_string(years_array)
       parsed_years = []
       years_array.each do |year|
-        byebug
         parsed_years << year.split('/').last.to_i
       end
       parsed_years      
